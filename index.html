@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Rozy 🎀</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Trebuchet MS", Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd1e3,#ffb6d2,#ffe3ef);
+  overflow:hidden;
+  color:#704957;
+}
+
+/* Flowers */
+.flower{
+  position:fixed;
+  font-size:28px;
+  animation:flowerFloat 6s infinite ease-in-out;
+}
+
+.flower1{left:5%;top:15%}
+.flower2{right:7%;top:25%;animation-delay:1s}
+.flower3{left:10%;bottom:12%;animation-delay:2s}
+.flower4{right:10%;bottom:15%;animation-delay:3s}
+
+@keyframes flowerFloat{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-15px) rotate(8deg)}
+}
+
+/* Butterflies */
+.butterfly{
+  position:fixed;
+  font-size:27px;
+  animation:fly 8s linear infinite;
+}
+
+.b1{left:5%;top:40%}
+.b2{right:5%;top:55%;animation-delay:3s}
+.b3{left:45%;top:5%;animation-delay:1s}
+
+@keyframes fly{
+  0%{transform:translate(0,0) rotate(0)}
+  25%{transform:translate(35px,-30px) rotate(10deg)}
+  50%{transform:translate(-20px,-60px) rotate(-10deg)}
+  75%{transform:translate(30px,-25px) rotate(8deg)}
+  100%{transform:translate(0,0) rotate(0)}
+}
+
+/* Main Card */
+.container{
+  width:92%;
+  max-width:430px;
+  margin:35px auto;
+  position:relative;
+  z-index:5;
+}
+
+.card{
+  background:rgba(255,255,255,.88);
+  border:3px solid rgba(255,255,255,.7);
+  border-radius:35px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 15px 45px rgba(180,70,120,.25);
+}
+
+/* Teddy */
+.teddy{
+  font-size:105px;
+  animation:teddyMove 2s infinite ease-in-out;
+}
+
+@keyframes teddyMove{
+  0%,100%{transform:rotate(-4deg)}
+  50%{transform:rotate(4deg) translateY(-8px)}
+}
+
+h1{
+  margin:5px 0;
+  color:#e7548b;
+  font-size:34px;
+}
+
+.subtitle{
+  color:#a65b7c;
+  font-size:16px;
+  margin:8px 0 22px;
+}
+
+/* Button */
+button{
+  border:none;
+  width:90%;
+  padding:15px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ed6f9d,#c77be8);
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  box-shadow:0 8px 18px rgba(190,80,140,.25);
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+/* Wishes */
+.wishes{
+  display:none;
+  margin-top:20px;
+  padding:20px 16px;
+  border-radius:25px;
+  background:#fff0f7;
+  animation:appear .6s ease;
+}
+
+.wishes.show{
+  display:block;
+}
+
+.wishes h2{
+  color:#e05288;
+  margin-top:0;
+}
+
+.wishes p{
+  line-height:1.7;
+  font-size:15px;
+}
+
+.small{
+  margin-top:22px;
+  color:#b16c8c;
+  font-size:13px;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Flowers -->
+<div class="flower flower1">🌸</div>
+<div class="flower flower2">🌷</div>
+<div class="flower flower3">🌺</div>
+<div class="flower flower4">🌸</div>
+
+<!-- Butterflies -->
+<div class="butterfly b1">🦋</div>
+<div class="butterfly b2">🦋</div>
+<div class="butterfly b3">🦋</div>
+
+<div class="container">
+
+<div class="card">
+
+  <div class="teddy">🧸</div>
+
+  <h1>Happy Birthday Rozy 🎀</h1>
+
+  <div class="subtitle">
+    A little birthday surprise made with love 💗
+  </div>
+
+  <button onclick="showWish()">
+    🌸 Good Wishes 🌸
+  </button>
+
+  <div id="wishes" class="wishes">
+
+    <h2>💗 For You, Rozy 💗</h2>
+
+    <p>
+      Wishing you a very Happy Birthday! 🎂✨
+    </p>
+
+    <p>
+      May your life always be filled with
+      happiness, love, beautiful memories
+      and countless reasons to smile. 🌸
+    </p>
+
+    <p>
+      May all your dreams come true
+      and every new day bring something
+      beautiful into your life. 🦋💕
+    </p>
+
+    <p>
+      Keep smiling, keep shining
+      and always stay this wonderful. 🎀🌷
+    </p>
+
+    <p style="font-weight:bold;">
+      Happy Birthday once again, Rozy! 🥳💗
+    </p>
+
+    <div style="font-size:30px;">
+      🌸 🦋 💕 🦋 🌸
+    </div>
+
+  </div>
+
+  <div class="small">
+    Made with love for Rozy 💗
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function showWish(){
+  document.getElementById("wishes").classList.add("show");
+}
+</script>
+
+</body>
+</html>
